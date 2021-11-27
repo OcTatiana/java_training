@@ -8,6 +8,20 @@
 
 link1
 
+``` java
+public boolean isPalindrome(ListNode head) {
+    ListNode input = head;
+    ListNode reverse = reverseList(middleNode(head));
+    while (reverse != null) {
+        if (input.val != reverse.val)
+            return false;
+        input = input.next;
+        reverse = reverse.next;
+    }
+    return true;
+}
+```
+
 ## Problem 2
 
 link 2
