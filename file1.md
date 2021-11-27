@@ -12,6 +12,22 @@ link1
 
 link 2
 
+``` java
+private ListNode reverseList(ListNode head) {
+    ListNode next = null;
+    ListNode cur = head;
+    ListNode prev = null;
+
+    while (cur != null) {
+        next = cur.next;
+        cur.next = prev;
+        prev = cur;
+        cur = next;
+    }
+    return prev;
+}
+```
+
 ## Problem 3
 
 link 3
