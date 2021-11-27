@@ -31,3 +31,17 @@ private ListNode reverseList(ListNode head) {
 ## Problem 3
 
 link 3
+
+``` java
+private ListNode middleNode(ListNode head) {
+    ListNode slowPointer = head;
+    ListNode fastPointer = head;
+
+    while (fastPointer != null && fastPointer.next != null) {
+        slowPointer = slowPointer.next;
+        fastPointer = fastPointer.next.next;
+    }
+
+    return slowPointer;
+}
+```
